@@ -1,14 +1,20 @@
-## Put comments here that give an overall description of what your
-## functions do
+## R Programming Assignment 2
+## Scoping functionality used to create
+## a cache for matrix inversion
 
-## Write a short comment describing this function
+## makeCacheMatrix - manages a cached Matrix "object"
 
 makeCacheMatrix <- function(x = matrix()) {
-
+    m <- NULL
+    set <- function(y) {
+        x <<- y
+        m <<- NULL
+    }
+    get <- function() x
 }
 
 
-## Write a short comment describing this function
+## CacheSolve - inverts a cached matrix
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
